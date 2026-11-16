@@ -1,12 +1,26 @@
 package com.oscilla.simulation;
 
+import java.util.Random;
+
 public class Synaptic implements CellularAutomaton {
 
     private int[][] grid;
 
     public Synaptic() {
-        // java automatically assign every cell to int 0;
+        Random rand = new Random();
+        initializeGrid(rand);
+    }
+
+    private void initializeGrid(Random rand) {
         grid = new int[10][10];
+        int state;
+
+        for (int row = 0; row < grid.length; row++) {
+            for (int col = 0; col < grid[row].length; col++) {
+                state = rand.nextInt(2);
+                grid[row][col] = state;
+            }
+        }
     }
 
     @Override
@@ -64,6 +78,8 @@ public class Synaptic implements CellularAutomaton {
                 }
             }
         }
+
+        grid = nextGrid;
     }
 
     @Override
