@@ -12,12 +12,11 @@ public class Synaptic implements CellularAutomaton {
     }
 
     private void initializeGrid(Random rand) {
-        grid = new int[10][10];
-        int state;
+        grid = new int[50][50];
 
         for (int row = 0; row < grid.length; row++) {
             for (int col = 0; col < grid[row].length; col++) {
-                state = rand.nextInt(2);
+                int state = rand.nextDouble() < 0.15 ? 1 : 0;
                 grid[row][col] = state;
             }
         }

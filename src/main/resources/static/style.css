@@ -1,0 +1,85 @@
+:root {
+    --background: #090b1c;
+    --surface: #11162b;
+    --cyan: #45dfff;
+    --purple: #a66aff;
+    --text: #e8eaff;
+    --muted: #9da8c8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-align: center;
+}
+
+header {
+    padding: 1.5rem 1rem 0.5rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: #c8b8ff;
+}
+
+header p {
+    color: var(--cyan);
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+main {
+    padding: 0.5rem 1rem 1.5rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+canvas {
+    display: block;
+    width: min(500px, 100%, 55vh);
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #30365c;
+    box-shadow: 0 0 35px rgba(34, 211, 238, 0.12);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+button {
+    padding: 0.75rem 2rem;
+    background: var(--surface);
+    color: var(--cyan);
+    border: 1px solid var(--purple);
+    border-radius: 6px;
+    font: inherit;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background: #1c2343;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.35);
+}
